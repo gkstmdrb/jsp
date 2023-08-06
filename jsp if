@@ -1,0 +1,35 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>전역변수 vs 지역변수</title>
+</head>
+<body>
+	<b> 전역변수와 지역변수의 선언 및 이용하기</b><br>
+	
+	<%! 
+		int temp = 0;
+		int A = 1; //전역변수 선언
+		int B = 3;
+	%>
+	
+	<%-- 단독 jsp 주석 --%>
+	
+	<%
+		if(A > B) {
+			out.print("A: "+A+"<br>");
+			out.print("B: "+B+"<br>");
+			out.print(A + B);
+		} else if (A < B) {
+			temp = A;
+			A = B;
+			B = temp;
+			out.print("A: "+A+"<br>");
+			out.print("B: "+B+"<br>");
+			out.print(A-B);
+		}
+	%>
+</body>
+</html>
