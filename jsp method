@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%!
+	public int para_sum (int para1, int para2) {
+		int sum = para1 + para2;
+		return sum;
+	}
+%>
+
+<%
+	int num1 = 5;
+	int num2 = 10;
+	int hap = para_sum(num1, num2);
+%>
+
+<b>주어진 두 수<%= num1 %>과 <%= num2 %>의 합은 <%= hap %>입니다.</b><br>
+<b>주어진 두 수 10과 20의 합은 <%= para_sum(10, 20) %>입니다.</b>
+</body>
+</html>
